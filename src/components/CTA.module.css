@@ -1,0 +1,101 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  background: var(--primary-container);
+  border-radius: 20px;
+  padding: 80px;
+  margin: 0 64px 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+[data-theme="dark"] .section { background: #1a2035; }
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(0, 81, 213, 0.15) 0%, transparent 60%),
+    radial-gradient(circle at 80% 50%, rgba(0, 81, 213, 0.1) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.title {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 8px;
+}
+
+[data-theme="dark"] .title { color: #e8ecf8; }
+
+.subtitle {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.65);
+  position: relative;
+  z-index: 1;
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+[data-theme="dark"] .subtitle { color: #9aa5c0; }
+
+.actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.btnDark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: #151b29;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 13px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity var(--transition), transform var(--transition);
+}
+.btnDark:hover { opacity: 0.9; transform: translateY(-1px); }
+.btnDark:active { transform: scale(0.97); }
+
+.btnOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #fff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 13px 28px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color var(--transition), background var(--transition);
+}
+.btnOutline:hover { border-color: rgba(255, 255, 255, 0.8); background: rgba(255, 255, 255, 0.1); }
+
+@media (max-width: 900px) {
+  .section { padding: 48px 24px; margin: 0 24px 64px; }
+  .actions { flex-direction: column; width: 100%; }
+  .btnDark, .btnOutline { width: 100%; justify-content: center; }
+}
