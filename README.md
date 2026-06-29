@@ -157,6 +157,6 @@ MIT © Gabriel Moraes
 
 ## 📧 Contato
 
-- Email: contact@gabrielmoraes.dev
-- LinkedIn: linkedin.com/in/gabrielmoraes
-- GitHub: github.com/gabrielmoraes
+- Email: moraescodes@gmail.com
+- LinkedIn: [linkedin.com/in/gabrielmoraes](https://www.linkedin.com/in/gabriel-moraes-61399b261/)
+- GitHub: [github.com/gabrielmoraes](https://github.com/MoraesC0des)
