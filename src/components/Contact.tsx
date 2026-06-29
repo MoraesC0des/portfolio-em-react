@@ -1,13 +1,9 @@
-import { useState, FormEvent } from 'react'
+
 import Icon from './Icon'
 import Reveal from './Reveal'
 import styles from './Contact.module.css'
 
-interface FormData {
-  name: string
-  email: string
-  message: string
-}
+
 
 const CONTACT_INFO = [
   { icon: 'mail', label: 'E-mail', value: 'moraescodes@gmail.com', href: 'mailto:moraescodes@gmail.com' },
@@ -17,29 +13,29 @@ const CONTACT_INFO = [
 ]
 
 export default function Contact() {
-  const [form, setForm] = useState<FormData>({ name: '', email: '', message: '' })
-  const [sent, setSent] = useState(false)
-  const [loading, setLoading] = useState(false)
+  // const [form, setForm] = useState<FormData>({ name: '', email: '', message: '' })
+  // const [sent, setSent] = useState(false)
+  // const [loading, setLoading] = useState(false)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setForm(f => ({ ...f, [e.target.name]: e.target.value }))
-  }
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  //   setForm(f => ({ ...f, [e.target.name]: e.target.value }))
+  // }
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setLoading(true)
+  // const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault()
+  //   setLoading(true)
 
-    try {
-      // Simulated submission — replace with actual API call
-      await new Promise(resolve => setTimeout(resolve, 1500))
-      setSent(true)
-      setForm({ name: '', email: '', message: '' })
-    } catch (error) {
-      console.error('Error submitting form:', error)
-    } finally {
-      setLoading(false)
-    }
-  }
+  //   try {
+  //     // Simulated submission — replace with actual API call
+  //     await new Promise(resolve => setTimeout(resolve, 1500))
+  //     setSent(true)
+  //     setForm({ name: '', email: '', message: '' })
+  //   } catch (error) {
+  //     console.error('Error submitting form:', error)
+  //   } finally {
+  //     setLoading(false)
+  //   }
+  // }
 
   return (
     <section className={styles.section} id="contact" aria-labelledby="contact-title">
