@@ -1,6 +1,7 @@
 # Gabriel Moraes Portfolio
 
 Um portfolio moderno e responsivo desenvolvido com **React 18**, **TypeScript** e **Vite**.
+Verificar em - https://portfolio-em-react-3ch1.vercel.app/
 
 ## 🎯 Características
 
